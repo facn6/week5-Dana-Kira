@@ -1,0 +1,25 @@
+{
+  "name": "week5-dana-kira",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn6/week5-Dana-Kira.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn6/week5-Dana-Kira/issues"
+  },
+  "homepage": "https://github.com/facn6/week5-Dana-Kira#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.1"
+  }
+}
