@@ -18,6 +18,8 @@ const handlerHomeRoute = (response) => {
     }
   });
 };
+
+
 const handlePublic = (request, response) => {
   const { url } = request;
   const extention = url.split('.')[1];
