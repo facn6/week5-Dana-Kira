@@ -1,9 +1,15 @@
-const handler = require('./handlers.js');
+const handlers = require('./handlers.js');
 const router = (req,res)=>{
     if(req.url == '/')
     {
-        handler.handlerHomeRoute(res);
+        handlers.handlerHomeRoute(res);
+    }else if(req.url.indexOf('public') !== -1){
+        handlers.handlePublic(req,res);
     }
+    else{
+       handlers.handleNotFound(res);
+    }
+
 }
 
 module.exports = router;
