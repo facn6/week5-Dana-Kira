@@ -1,9 +1,8 @@
 const fs = require("fs");
 const path =require("path");
 
-
 const handlerHomeRoute = (response)=>{
-    const filepath = path.join(__dirname, '..' , 'public' , 'index.html');
+    const filepath = path.join(__dirname , '..' , 'public' , 'index.html');
     fs.readFile(filepath, (error,file)=>{
         if(error)
         {
