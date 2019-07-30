@@ -1,19 +1,9 @@
 {
-  "extends" : "airbnb",
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true
-  },
-  "extends": "eslint:recommended",
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
+  "extends": ["airbnb-base"],
   "rules": {
-    "no-console" : [1]
+    "semi": [2]
+  },
+  "env": {
+    "node": true
   }
 }
