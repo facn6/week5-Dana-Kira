@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/facn6/week5-Dana-Kira#readme",
   "devDependencies": {
-    "eslint": "^6.1.0",
     "nodemon": "^1.19.1",
     "tap-spec": "^5.0.0"
   },
