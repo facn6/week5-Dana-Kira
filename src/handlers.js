@@ -52,11 +52,9 @@ const handlerNews = (request, response, section) => {
       const { results } = info.response;
       const answer = [];
       for (let i = 0; i < 10; i++) {
-        console.log('test');
         answer.push(results[i]);
       }
-      console.log(answer);
-      response.writeHead(200, { 'Content-type': 'text/html' });
+      response.writeHead(200, { 'Content-type': 'application/json' });
       response.end(JSON.stringify(answer));
     },
   );
