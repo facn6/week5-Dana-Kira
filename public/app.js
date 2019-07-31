@@ -17,6 +17,8 @@ function getSelectValue()
         
         var label = document.createElement('label'); 
         label.innerHTML = data[i].webTitle; 
+        label.style.fontWeight ="bold";
+        label.style.fontSize ="130%"
         card.appendChild(label);
         var link = document.createElement('a'); 
         link.href = data[i].webUrl;
