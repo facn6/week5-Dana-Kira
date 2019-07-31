@@ -8,7 +8,15 @@ const router = (req, res) => {
     handlers.handlePublic(req, res);
   } else if (req.url === '/news') {
     handlers.handlerNews(req, res);
-  } else {
+  }else if(req.url === '/lifestyle'){
+    
+  }else if(req.url === '/tech'){
+    
+  }else if(req.url === '/football'){
+    
+  }else if(req.url === '/buisness'){
+    
+  }else {
     handlers.handleNotFound(res);
   }
 };
