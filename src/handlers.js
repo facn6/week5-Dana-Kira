@@ -19,7 +19,6 @@ const handlerHomeRoute = (response) => {
   });
 };
 
-
 const handlePublic = (request, response) => {
   const { url } = request;
   const extention = url.split('.')[1];
@@ -44,17 +43,26 @@ const handlePublic = (request, response) => {
 
 const handlerNews = (request, response) => {
   requester(
-    'http://content.guardianapis.com/news?&api-key=e6a6ef2a-cf70-4f11-be1b-4d9feaaba6f0',
+    'http://content.guardianapis.com/politics?&api-key=e6a6ef2a-cf70-4f11-be1b-4d9feaaba6f0',
     (err, res, body) => {
       if (err) {
         console.log(`Error ${err}`);
         response.writeHead(500, { 'content-type': 'text/plain' });
         return response.end('Sorry, there was a server error');
       }
+
       const info = JSON.parse(body);
-      const show = info.response.results[0].webUrl;
-      console.log(show);
-      return response.end('News!!!');
+      const { results } = info.response;
+      const answer = [];
+      for (let i = 0; i < 10; i++) {
+        console.log('test');
+        answer.push(results[i]);
+      }
+
+      console.log(answer);
+
+      response.writeHead(200, { 'Content-type': 'text/html' });
+      response.end(JSON.stringify(answer));
     },
   );
 };
@@ -69,3 +77,10 @@ module.exports = {
   handleNotFound,
   handlerNews,
 };
+
+
+// var key = results[i].webTitle;
+// console.log(key);
+// var value = results[i].webUrl;
+// console.log(value);
+// answer[key] = value;
