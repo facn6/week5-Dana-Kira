@@ -10,3 +10,7 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.dropDown{
+    margin-bottom: 10%;
+}
