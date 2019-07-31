@@ -6,17 +6,10 @@ const router = (req, res) => {
     handlers.handlerHomeRoute(res);
   } else if (req.url.indexOf('public') !== -1) {
     handlers.handlePublic(req, res);
-  } else if (req.url === '/news') {
-    handlers.handlerNews(req, res);
-  }else if(req.url === '/lifestyle'){
-    
-  }else if(req.url === '/tech'){
-    
-  }else if(req.url === '/football'){
-    
-  }else if(req.url === '/buisness'){
-    
-  }else {
+  } else if (req.url === '/politics' || req.url === '/fashion' || req.url === '/environment' || req.url === '/football' || req.url === '/business') {
+    const section = req.url;
+    handlers.handlerNews(req, res, section);
+  } else {
     handlers.handleNotFound(res);
   }
 };
