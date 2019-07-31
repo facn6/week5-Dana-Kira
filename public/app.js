@@ -13,10 +13,13 @@ function getSelectValue()
         var card=document.createElement('div');
         card.setAttribute('class','card');
         card.setAttribute('id',i);
+        
+        
+        var label = document.createElement('label'); 
+        label.innerHTML = data[i].webTitle; 
+        label.style.fontWeight ="bold";
+        label.style.fontSize ="130%"
 
-
-        var label = document.createElement('label');
-        label.innerHTML = data[i].webTitle;
         card.appendChild(label);
         var link = document.createElement('a');
         link.href = data[i].webUrl;
