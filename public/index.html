@@ -8,14 +8,14 @@
     </head>
     <body>
         <h1>choose a topic</h2>
-        <select id="list">
+        <select id="list" onchange="getSelectValue()">
             <option value="News">News</option>
             <option value="Lifestyle" >Lifestyle</option>
             <option value="Football" >Football</option>
             <option value="Buisness">Buisness</option>
             <option value="Tech">Tech</option>
         </select>
-        <div class="card" id="result">
+        <div class="main" id="result">
 
         </div>
     <script src="public/app.js"></script>

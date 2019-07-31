@@ -24,6 +24,7 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
+    "js-yaml": "^3.13.1",
     "request": "^2.88.0",
     "supertest": "^4.0.2",
     "tape": "^4.11.0"
