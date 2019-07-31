@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const requester = require('request');
-// const qs = require("querystring");
-// const http = require("http");
-
 
 const handlerHomeRoute = (response) => {
   const filepath = path.join(__dirname, '..', 'public', 'index.html');
@@ -41,9 +38,9 @@ const handlePublic = (request, response) => {
   });
 };
 
-const handlerNews = (request, response) => {
+const handlerNews = (request, response, section) => {
   requester(
-    'http://content.guardianapis.com/politics?&api-key=e6a6ef2a-cf70-4f11-be1b-4d9feaaba6f0',
+    `http://content.guardianapis.com/${section}?&api-key=e6a6ef2a-cf70-4f11-be1b-4d9feaaba6f0`,
     (err, res, body) => {
       if (err) {
         console.log(`Error ${err}`);
@@ -58,9 +55,7 @@ const handlerNews = (request, response) => {
         console.log('test');
         answer.push(results[i]);
       }
-
       console.log(answer);
-
       response.writeHead(200, { 'Content-type': 'text/html' });
       response.end(JSON.stringify(answer));
     },
@@ -77,10 +72,3 @@ module.exports = {
   handleNotFound,
   handlerNews,
 };
-
-
-// var key = results[i].webTitle;
-// console.log(key);
-// var value = results[i].webUrl;
-// console.log(value);
-// answer[key] = value;
