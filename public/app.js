@@ -8,7 +8,7 @@ function getSelectValue()
         var result = document.getElementById('result1');
         while (result.hasChildNodes()) {
             result.removeChild(result.firstChild);
-        } 
+        }
         for(let i=0;i<data.length;i++){
         var card=document.createElement('div');
         card.setAttribute('class','card');
@@ -19,13 +19,15 @@ function getSelectValue()
         label.innerHTML = data[i].webTitle; 
         label.style.fontWeight ="bold";
         label.style.fontSize ="130%"
+
         card.appendChild(label);
-        var link = document.createElement('a'); 
+        var link = document.createElement('a');
         link.href = data[i].webUrl;
-        link.innerHTML ='Read The Article Online';
-        card.appendChild(link); 
+        link.innerHTML ='Read The Full Article Online';
+        card.appendChild(link);
 
         result.appendChild(card);
-    } 
+    }
 });
+
 }

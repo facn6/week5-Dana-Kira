@@ -54,7 +54,8 @@ const handlerNews = (request, response, section) => {
       for (let i = 0; i < 10; i++) {
         answer.push(results[i]);
       }
-      response.writeHead(200, { 'Content-type': 'text/html' });
+
+      response.writeHead(200, { 'Content-type': 'application/json' });
       response.end(JSON.stringify(answer));
     },
   );
