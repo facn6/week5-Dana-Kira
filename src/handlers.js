@@ -8,7 +8,7 @@ const handlerHomeRoute = (response) => {
     if (error) {
       console.log(error);
       response.writeHead(500, { 'Content-type': 'text/html' });
-      response.end('<h1> we have an error , sorry</h1>');
+      response.end('<h1> Sorry, there was a server error</h1>');
     } else {
       response.writeHead(200, { 'Content-type': 'text/html' });
       response.end(file);
@@ -30,7 +30,7 @@ const handlePublic = (request, response) => {
     if (error) {
       console.log(error);
       response.writeHead(500, { 'Content-type': extentionType.html });
-      response.end('<h1>there is an error</h1>');
+      response.end('<h1>Sorry, there was a server error</h1>');
     } else {
       response.writeHead(200, { 'Content-type': extentionType[extention] });
       response.end(file);
@@ -62,7 +62,7 @@ const handlerNews = (request, response, section) => {
 
 const handleNotFound = (response) => {
   response.writeHead(404);
-  response.end('<h1>page is not found</h1>');
+  response.end('<h1>This page cannot be found</h1>');
 };
 module.exports = {
   handlerHomeRoute,
