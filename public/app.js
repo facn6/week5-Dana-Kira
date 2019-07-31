@@ -1,26 +1,25 @@
 
-
 function getSelectValue() {
   const selectedValue = document.getElementById('list').value;
   console.log(selectedValue);
   fetch(`/${selectedValue}`).then(res => res.json()).then((data) => {
-    renderHTML(data);
-  });
-}
+    const result = document.getElementById('result1');
 
-getSelectValue();
-function renderHTML(data) {
-  const result = document.getElementById('result');
-  for (let i = 0; i < 2; i++) {
-    const card = document.createElement('div');
-    card.setAttribute('class', 'card');
-    card.setAttribute('id', i);
-    const label = document.createElement('label');
-    const link = document.createElement('link');
-    label.innerHTML = data[i].webTitle;
-    link.innerHTML = data[i].webUrl;
-    card.appendChild(label);
-    card.appendChild(link);
-    result.appendChild(card);
-  }
+    for (let i = 0; i < data.length; i++) {
+      const card = document.createElement('div');
+      card.setAttribute('class', 'card');
+      card.setAttribute('id', i);
+
+
+      const label = document.createElement('label');
+      label.innerHTML = data[i].webTitle;
+      card.appendChild(label);
+      const link = document.createElement('a');
+      link.href = data[i].webUrl;
+      link.innerHTML = 'Read The Article Online';
+      card.appendChild(link);
+
+      result.appendChild(card);
+    }
+  });
 }
