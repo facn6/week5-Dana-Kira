@@ -6,7 +6,17 @@ const router = (req, res) => {
     handlers.handlerHomeRoute(res);
   } else if (req.url.indexOf('public') !== -1) {
     handlers.handlePublic(req, res);
-  } else {
+  } else if(req.url === '/news'){
+
+  }else if(req.url === '/lifestyle'){
+    
+  }else if(req.url === '/tech'){
+    
+  }else if(req.url === '/football'){
+    
+  }else if(req.url === '/buisness'){
+    
+  }else {
     handlers.handleNotFound(res);
   }
 };
