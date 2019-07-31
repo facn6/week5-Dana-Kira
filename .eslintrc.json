@@ -1,7 +1,9 @@
 {
   "extends": ["airbnb-base"],
   "rules": {
-    "semi": [2]
+    "semi": [2],
+    "consistent-return":0,
+    "no-plusplus":0
   },
   "env": {
     "node": true
