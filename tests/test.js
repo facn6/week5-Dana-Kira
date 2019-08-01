@@ -1,6 +1,6 @@
 const test = require('tape');
 const supertest = require('supertest');
-const router = require('./routers');
+const router = require('../src/routers.js');
 
 
 test('Demo', (t) => {
@@ -21,7 +21,7 @@ test('Home route returns a status code of 200', (t) => {
     });
 });
 
-test('Non exsistant pages return a status code of 404', (t) => {
+test('Non exsistent pages return a status code of 404', (t) => {
   supertest(router)
     .get('/tech')
     .expect(404)
