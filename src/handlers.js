@@ -53,11 +53,6 @@ const handlerNews = (request, response, section) => {
 
       const firstTenPosts = results.slice(0,9);
 
-      // const answer = [];
-      // for (let i = 0; i < 10; i++) {
-      //   answer.push(results[i]);
-      // }
-
       response.writeHead(200, { 'Content-type': 'application/json' });
       response.end(JSON.stringify(firstTenPosts));
     },
