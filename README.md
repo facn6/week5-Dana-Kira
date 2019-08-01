@@ -6,5 +6,9 @@ We used an API key to access the information, and this key is not seen by the us
 
 https://week5danakira.herokuapp.com/
 
+[![Build Status](https://travis-ci.com/facn6/week5-Dana-Kira.svg?branch=master)](https://travis-ci.com/facn6/week5-Dana-Kira)
+
 Enjoy Our Project :)
+
+
 
