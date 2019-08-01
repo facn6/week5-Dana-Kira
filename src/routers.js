@@ -9,7 +9,10 @@ const router = (req, res) => {
   } else if (req.url === '/politics' || req.url === '/fashion' || req.url === '/environment' || req.url === '/football' || req.url === '/business') {
     const section = req.url;
     handlers.handlerNews(req, res, section);
-  } else {
+  } else if (url === '/public/node-icon.ico'){
+    handlers.handleIcon(res);
+    }
+  else {
     handlers.handleNotFound(res);
   }
 };
