@@ -7,8 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1 class="title">Choose Your News</h2>
-        <select id="list" class="dropDown" onchange="getSelectValue()">
+        <h1>Choose Your News</h1>
+
+        <div class="dropDown">
+        <select id="list" onchange="getSelectValue()">
 
             <option></option>
             <option value="politics">Politics</option>
@@ -18,6 +20,8 @@
             <option value="environment">Environment</option>
 
         </select>
+      </div>
+
         <div id="result1">
 
         </div>

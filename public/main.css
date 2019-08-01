@@ -1,32 +1,54 @@
 body{
     background-image: url("https://img.freepik.com/free-vector/blue-abstract-acrylic-brush-stroke-textured-background_53876-86373.jpg?size=3500&ext=jpg");
     background-repeat: no-repeat;
-    max-width: 500px; 
-    margin: auto;
+    /* max-width: 500px; */
+    /* margin: auto; */
 
-   
+
 }
- .title{
-     display: flex;
-     justify-content: center;
-     margin-right:30%;
+ h1 {
+  text-align: center;
+
  }
 .card{
     border: 10px double rgb(82, 81, 44);
     padding: 25px;
     background-origin: padding-box, padding-box;
     box-shadow: 0 8px 16px 0 rgba(182, 44, 44, 0.2);
-    margin-bottom: 10%;
-    margin-right:20%;
-    display: flex;
+    margin-bottom: 5%;
+  display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 
 .dropDown{
-    display: flex;
-    justify-content: center;
-    margin-left:10%;
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+  }
+
+#result1{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+select{
+  width: 400px;
+  height: 40px;
+  padding: 5px;
+  color: blue;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+
+option {
+  color: blue;
+  font- : 20px;
+  font-family: fantasy;
+ }
+/* select option:first-child{
+  color: blue; */
 }
