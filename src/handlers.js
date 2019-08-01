@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const requester = require('request');
-
+require('dotenv').config();
+const KEY  = process.env.KEY;
 const handlerHomeRoute = (response) => {
   const filepath = path.join(__dirname, '..', 'public', 'index.html');
   fs.readFile(filepath, (error, file) => {
@@ -38,9 +39,9 @@ const handlePublic = (request, response) => {
   });
 };
 
-const handlerNews = (request, response, section) => {
+const handlerNews = (response, section) => {
   requester(
-    `http://content.guardianapis.com/${section}?&api-key=e6a6ef2a-cf70-4f11-be1b-4d9feaaba6f0`,
+    `http://content.guardianapis.com/${section}?&api-key=` + KEY,
     (err, res, body) => {
       if (err) {
         console.log(`Error ${err}`);

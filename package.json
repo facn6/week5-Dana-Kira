@@ -23,6 +23,7 @@
     "tap-spec": "^5.0.0"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "js-yaml": "^3.13.1",

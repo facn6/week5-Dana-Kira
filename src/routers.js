@@ -8,7 +8,7 @@ const router = (req, res) => {
     handlers.handlePublic(req, res);
   } else if (req.url === '/politics' || req.url === '/fashion' || req.url === '/environment' || req.url === '/football' || req.url === '/business') {
     const section = req.url;
-    handlers.handlerNews(req, res, section);
+    handlers.handlerNews(res, section);
   } else if (req.url === '/public/node-icon.ico'){
     handlers.handleIcon(res);
     }
