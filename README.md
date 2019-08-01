@@ -1,7 +1,10 @@
 # week5-Dana-Kira
-my project id about five categories, you can select a category and you will see ten results for the specifec category you choose contain the title of the article and the url of the specific article.
-this is our webesite:
-url = https://week5danakira.herokuapp.com/
+
+In our project we use the Guardian API to retrieve the most recent articles in one of five categories: Politics, Fashion, Football, Business, and Environment. The user can choose a category, see the articles’ titles and then navigate to the Guardian website, if s/he wishes to read the full article. The API updates as new material is published on the website, so the content of our webpage will update accordingly.
+
+We used an API key to access the information, and this key is not seen by the user, since the request is made on the server side. The project is deployed on Heroku and we use Travis to employ continuous integration. Please visit our webpage on:
+
+https://week5danakira.herokuapp.com/
 
 Enjoy Our Project :)
 
